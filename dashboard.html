@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,65 +8,67 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
 
+<body class="dashboard-layout">
     <!-- SIDEBAR -->
     <aside class="sidebar">
-        <a href="dashboard.html" class="nav-item active">
-            <span class="icon">🏠</span> Dashboard
+        <a href="dashboard.html" class="nav-item">
+            <span class="icon"><i class="fas fa-home"></i></span>
         </a>
 
         <a href="products.html" class="nav-item">
-            <span class="icon">📦</span> List Produk
+            <span class="icon"><i class="fas fa-box-open"></i></span>
         </a>
 
-        <a href="login.html" class="nav-item logout">
-            <span class="icon">🚪</span> Logout
+        <a class="nav-item">
+            <span class="icon"><i class="fas fa-dollar"></i></span>
+        </a>
+
+        <a class="nav-item">
+            <span class="icon"><i class="fas fa-cog"></i></span>
+        </a>
+
+        <a href="index.html" class="nav-item logout">
+            <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
         </a>
     </aside>
 
-    <!-- CONTENT -->
     <div class="page-content">
 
-        <header>
-            <h1>Dashboard</h1>
-        </header>
+        <h1>Dashboard</h1>
 
-        <main class="dashboard-content">
+        <div class="dashboard-wrapper">
 
-            <!-- CARD SUMMARY -->
             <div class="summary-cards">
                 <div class="card">
-                    <div class="icon">📦</div>
+                    <div class="icon"><i class="fas fa-box-open"></i></div>
                     <p>Total Produk</p>
                     <h2 id="totalProducts">0</h2>
                 </div>
 
                 <div class="card">
-                    <div class="icon">🛍️</div>
+                    <div class="icon"><i class="fas fa-shopping-basket"></i></div>
                     <p>Total Penjualan</p>
                     <h2 id="totalSales">0</h2>
                 </div>
 
                 <div class="card">
-                    <div class="icon">💲</div>
+                    <div class="icon"><i class="fas fa-money-bill-wave"></i></div>
                     <p>Total Revenue</p>
                     <h2 id="totalRevenue">0</h2>
                 </div>
             </div>
 
-            <!-- BUTTON -->
             <div class="action-area">
-                <button id="btnProducts" class="btn primary-btn">
-                    Lihat Data Produk
-                </button>
+                <button id="btnProducts" class="btn primary-btn">Lihat Data Produk</button>
             </div>
 
-        </main>
-
+        </div>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
