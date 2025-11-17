@@ -1,0 +1,289 @@
+/*GLOBAL STYLE*/
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #fafafa;
+    color: #333;
+}
+
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/*LOGIN PAGE FULLSCREEN*/
+
+.login-body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+.login-page-wrapper {
+    display: flex;
+    height: 100vh;      
+    width: 100%;
+}
+
+.login-illustration {
+    flex: 1;
+    background: #f5f5f5;
+    border-right: 1px solid #eee;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-illustration img {
+    width: 75%;
+    opacity: .9;
+}
+
+.login-container {
+    flex: 1;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-container h1 {
+    font-size: 42px;
+    margin-bottom: 35px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.forgot-password {
+    text-align: right;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #777;
+}
+
+/* Buttons */
+.btn {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.primary-btn {
+    background: #333;
+    color: white;
+}
+
+.social-row {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-row .btn {
+    flex: 1;
+}
+
+.secondary-btn {
+    background: #f1f1f1;
+    border: 1px solid #ddd;
+}
+
+.separator {
+    margin: 25px 0;
+    text-align: center;
+    color: #888;
+}
+
+
+/*SIDEBAR*/
+
+.sidebar {
+    width: 80px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #f3f3f3;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #999;
+    font-size: 13px;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.nav-item i {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    color: #333;
+    background: rgba(0,0,0,0.05);
+}
+
+/*PAGE CONTENT*/
+
+.page-content {
+    margin-left: 100px; 
+    padding: 40px;
+}
+
+.page-content h1 {
+    font-size: 32px;
+    margin-bottom: 28px;
+}
+
+/*DASHBOARD CARDS*/
+.dashboard-wrapper {
+    background: #fff;
+    border: 1px solid #e0e0e0;  
+    border-radius: 12px;          
+    padding: 35px 40px;
+    max-width: 1000px;             
+    margin: 20px auto;             
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.dashboard-wrapper h1 {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.dashboard-container {
+    max-width: 900px;
+    margin: 0 auto;           
+}
+
+.summary-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;          
+}
+
+.action-area {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;  
+}
+
+.action-area .btn {
+    width: 300px;             
+    border-radius: 8px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+
+    width: 230px;
+    padding: 25px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card i {
+    font-size: 28px;
+    color: #777;
+}
+
+.card p {
+    font-size: 14px;
+    color: #777;
+}
+
+.card h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+/*LIST PRODUCT TABLE*/
+
+.products-content h1 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.products-table-wrapper {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+#productsTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#productsTable th {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+#productsTable td {
+    padding: 12px;
+    border-bottom: 1px solid #f3f3f3;
+    color: #333;
+    font-size: 14px;
+}
+
+#productsTable td i {
+    cursor: pointer;
+    color: #777;
+    transition: 0.2s;
+}
+
+#productsTable td i:hover {
+    color: #111;
+}
+
+/*RESPONSIVE LOGIN*/
+
+@media (max-width: 800px) {
+    .login-page-wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .login-container {
+        padding: 35px;
+    }
+
+    .login-illustration {
+        padding: 20px;
+    }
+}

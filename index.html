@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Pemrograman Web 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-page-wrapper">
+        <div class="login-illustration">
+            <img src="https://images.unsplash.com/photo-1485470733090-0aae1788d5af?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2FsbHBhcGVyJTIwNGt8ZW58MHx8MHx8fDA%3D" alt="Login Illustration">
+        </div>
+
+        <div class="login-container">
+            <h1>Welcome Back!</h1>
+            
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                
+                <p class="forgot-password"><a href="#">Forgot Password?</a></p>
+                
+                <p id="errorMessage" class="error-message"></p> 
+                
+                <button type="submit" class="btn primary-btn">Login</button>
+            </form>
+            
+            <div class="separator">Or</div>
+            
+            <div class="social-row">
+                <button class="btn secondary-btn">G Google</button>
+                <button class="btn secondary-btn">f Facebook</button>
+            </div>
+
+            <p class="signup-link">Don't have an account? <a href="#">Sign Up</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

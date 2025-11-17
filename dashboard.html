@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Pemrograman Web 1</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <a href="dashboard.html" class="nav-item active">
+            <span class="icon">🏠</span> Dashboard
+        </a>
+
+        <a href="products.html" class="nav-item">
+            <span class="icon">📦</span> List Produk
+        </a>
+
+        <a href="login.html" class="nav-item logout">
+            <span class="icon">🚪</span> Logout
+        </a>
+    </aside>
+
+    <!-- CONTENT -->
+    <div class="page-content">
+
+        <header>
+            <h1>Dashboard</h1>
+        </header>
+
+        <main class="dashboard-content">
+
+            <!-- CARD SUMMARY -->
+            <div class="summary-cards">
+                <div class="card">
+                    <div class="icon">📦</div>
+                    <p>Total Produk</p>
+                    <h2 id="totalProducts">0</h2>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🛍️</div>
+                    <p>Total Penjualan</p>
+                    <h2 id="totalSales">0</h2>
+                </div>
+
+                <div class="card">
+                    <div class="icon">💲</div>
+                    <p>Total Revenue</p>
+                    <h2 id="totalRevenue">0</h2>
+                </div>
+            </div>
+
+            <!-- BUTTON -->
+            <div class="action-area">
+                <button id="btnProducts" class="btn primary-btn">
+                    Lihat Data Produk
+                </button>
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
