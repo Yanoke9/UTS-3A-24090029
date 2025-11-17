@@ -27,33 +27,27 @@ function formatRupiah(number) {
 
 // II. Fungsionalitas Halaman Login (index.html)
 
-function login() {
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
+const loginForm = document.getElementById('loginForm');
 
-    const correctEmail = "notzuardboah@gmail.com";
-    const correctNIM = "24090029";
+if (loginForm) {
+    loginForm.addEventListener('submit', function(event) {
+        event.preventDefault(); 
 
-    if (email === correctEmail && password === correctNIM) {
-        localStorage.setItem("loggedIn", "true");
-        window.location.href = "dashboard.html";
-    } else {
-        alert("Email atau password (NIM) salah!");
-    }
-}
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value.trim();
+        const errorMsg = document.getElementById('errorMessage');
 
-/* Protect pages from unauthorized access */
-function protectPage() {
-    const protectedPages = ["dashboard.html", "products.html"];
-    const page = window.location.pathname.split("/").pop();
-
-    if (protectedPages.includes(page)) {
-        if (localStorage.getItem("loggedIn") !== "true") {
-            window.location.href = "index.html";
+        if (email === '' || password === '') {
+            errorMsg.textContent = '⚠️ Email dan Password (NIM) tidak boleh kosong.';
+            return;
         }
-    }
+
+        errorMsg.textContent = '';
+        alert('Login berhasil! Selamat datang.'); 
+        window.location.href = 'dashboard.html';
+    });
 }
-protectPage();
+
 // III. Fungsionalitas Halaman Dashboard (dashboard.html)
 
 function loadDashboardData() {
@@ -145,4 +139,3 @@ loadProductsTable();
         }
     });
 })();
-
